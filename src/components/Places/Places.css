@@ -1,0 +1,9 @@
+.places > h2 {
+    margin: 10px 5px;
+}
+
+.places > .btn > Button {
+    border-radius:  30px;
+    text-transform: inherit;
+    margin: 5px;
+}
