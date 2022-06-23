@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core'
+import {Link} from "react-router-dom"
 import React from 'react'
 import './Places.css'
 import Card from './Card'
@@ -17,13 +17,7 @@ const Places = () => {
     return (
         <div className='places'>
             <h2>Find Home that make you feel comfortable</h2> 
-            <div className='btn'>
-                <Button variant="outlined">Cancellation flexibility</Button>
-                <Button variant="outlined">Type of place</Button>
-                <Button variant="outlined">Price</Button>
-                <Button variant="outlined">Rooms and beds</Button>
-                <Button variant="outlined">More filters</Button>
-            </div>           
+            <Link to="/create-product" className='btn btn-success btn-md'>CreateProduct</Link>    
             <Card img={data.img} title={data.title} location={data.location} description={data.description} star={data.star} price={data.price} total={data.total}/>
             <Card img={data.img} title={data.title} location={data.location} description={data.description} star={data.star} price={data.price} total={data.total}/>
             <Card img={data.img} title={data.title} location={data.location} description={data.description} star={data.star} price={data.price} total={data.total}/>

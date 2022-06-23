@@ -31,6 +31,9 @@
     top: 20px;
     right: 40px;
 }
+.Card_heart .liked{
+    color : red;
+}
 
 .Card_infoTop{
     width: 40vw;

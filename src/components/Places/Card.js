@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Card.css"
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder"
 import StarIcon from "@material-ui/icons/Star"
@@ -12,10 +12,11 @@ const Card = ({
     price,
     total,
 }) => {
+    const [liked, setLiked] = useState(false);
     return (
         <div className='Card'>
             <img src={img} alt=""/>
-            <FavoriteBorderIcon className="Card_heart" />
+            <FavoriteBorderIcon className={liked ? "Card_heart liked" : "Card_heart"} onClick={() => setLiked(!liked)}/>
             <div className='Card_info'>
                 <div className='Card_infoTop'>
                     <p>{location}</p>
