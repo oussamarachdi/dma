@@ -1,0 +1,243 @@
+/**********************Navbar***************************/
+
+.navbar{
+    background-color: #ffe599;
+    width: 100vw;
+}
+
+.navbar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+.navbar > ul >li{
+    width: 25vw;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.navbar > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    border-top: 2px solid #ffe599;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar > ul > li > a:hover {
+    border-top: 2px solid #f7f7f7;
+    color: white;
+}
+
+/******************************BOX**************************************/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.container > .box {
+    position: relative;
+    width: 500px;
+    padding: 40px;
+    background: #dbcc76;
+    box-shadow: 0 5px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.container > .box::before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+
+    pointer-events: none;
+}
+
+.container > .box > .title {
+    position: relative;
+    width: 0px;
+    height: 80px;
+    color: rgb(241, 237, 237);
+    background: rgb(83, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.6s;
+}
+.container > .box:nth-child(1):hover .title {
+    box-shadow: 0 0 0 400px #585858;
+}
+.container > .box > .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container > .box:hover .content {
+    color: #fff;
+}
+
+.container .box .content h2{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.container .box .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .box .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(8, 31, 95);
+    border-radius: 4px;
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(243, 240, 240, 0.2);
+}
+
+.offers{
+    position: relative;
+    bottom: 80px;
+    margin-left: 150px;
+    color: #dbcc76;
+
+    
+}
+
+h3{
+    position: relative;
+    left: 290px;
+    color: rgb(90, 90, 90);
+    
+}
+.hrv{
+    position: relative;
+    margin-top: 0px;
+    height: 180px;
+    width: 0;
+}
+
+.offers p{
+    position: relative;
+    top: 150px;
+    left: 40px;
+}
+
+
+/*****************************MODAL**********************************************************/
+
+.btnModal{
+    display: flex;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1.6rem;
+    border: 2px solid salmon;
+    border-radius: 3px;
+    background-color: brown;
+    color: antiquewhite;
+}
+
+.btnModal:hover{
+    background-color: grey;
+}
+
+
+.modalRecherche{
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+  }
+  
+  .modalRecherche-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .modalRecherche .modalRecherche-content .modalRecherche-header h4{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: monospace;
+  }
+  
+  
+  .modalRecherche-content{
+    margin: 10% auto;
+    background-color: white;
+    border-radius: 5%;
+    padding: 2.5%;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);;
+  }
+  .modalRecherche-content legend{
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .modalRecherche-content label{
+    font-weight: 700;
+    font-size: medium;
+    padding: 5px;
+  }
+  
+  .modalRecherche-content .btn-success{
+    border: none;
+    background-color: rgb(15, 55, 55);
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 5px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modalRecherche .close-btn{
+    border: none;
+    background: none;
+    color: rgba(159, 9, 9, 0.859);
+    font-size:28px;
+    transform: translateY(-25px) translateX(15px);
+  }
+  .modalRecherche .close-btn:hover{
+    transform: translateY(-25px)  translateX(15px);
+    color: red;
+  }
+
+  .modalRecherche-content #localisation{
+    width: 60%;
+    border: none;
+    background-color: #dbcc76;
+    border-radius: 5px;
+    padding: 10px;
+  }
