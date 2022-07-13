@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {cities} from '../../Data/cities.js'
 
 
 const ModalRecherche = ({setIsOpen}) => {
+  const [city, setCity] = useState("")
+
   return (
     <div className='modalRecherche'>
       <div className='modalRecherche-content'>
@@ -12,7 +15,7 @@ const ModalRecherche = ({setIsOpen}) => {
         <hr />
         <fieldset>
           <legend for="localisation">Localisation : </legend>
-          <select id='localisation' name='localisation'>
+          <select id='localisation' name='localisation' value={city} onChange={(e) => setCity(e.target.value)}>
             <option value="">Selectioner une ville : </option>
 
             <option value="sousse">Sousse</option>
@@ -22,7 +25,23 @@ const ModalRecherche = ({setIsOpen}) => {
             <option value="mahdia">Mahdia</option>
             <option value="monastir">monastir</option>
           </select>
+          
+
         </fieldset>
+        {
+          city !== "" && (
+            <fieldset>
+            <legend>Select town in {city} :</legend>
+            <select>
+              {
+                cities[city].map((town) => {
+                  return <option value={town}>{town}</option>
+                })
+              }
+            </select>
+          </fieldset>
+          )
+        }
         <hr />
         <fieldset>
           <legend>Select type of the house you want : </legend>
